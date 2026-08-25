@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>新竹金山街純外帶便當店創業可行性評估</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F2F2EE;
+    --card:#FBFBF9;
+    --ink:#1B1E1D;
+    --ink-soft:#4A504E;
+    --rule:#D5D6CF;
+    --enamel:#1F5F52;
+    --enamel-tint:#E4EDE9;
+    --amber:#B0761A;
+    --amber-tint:#F6EEDF;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Noto Sans TC",system-ui,sans-serif;
+    font-size:16px;
+    line-height:1.85;
+    letter-spacing:.01em;
+  }
+  .wrap{max-width:820px;margin:0 auto;padding:0 24px 96px}
+  header{padding:72px 0 40px;border-bottom:2px solid var(--ink)}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--enamel);margin:0 0 20px;
+  }
+  h1{
+    font-family:"Noto Serif TC",serif;font-weight:700;
+    font-size:clamp(28px,5.4vw,44px);line-height:1.35;
+    margin:0 0 20px;letter-spacing:.01em;
+  }
+  .standfirst{font-size:17px;color:var(--ink-soft);margin:0 0 28px;max-width:60ch}
+  .meta{
+    font-family:"IBM Plex Mono",monospace;font-size:12.5px;
+    color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:8px 22px;
+  }
+  .verdict{
+    margin:44px 0 8px;border:1.5px solid var(--ink);background:var(--card);
+    display:grid;grid-template-columns:auto 1fr;
+  }
+  .score{
+    padding:26px 30px;border-right:1.5px solid var(--ink);
+    background:var(--enamel);color:#fff;text-align:center;min-width:150px;
+  }
+  .score b{
+    display:block;font-family:"IBM Plex Mono",monospace;
+    font-size:42px;font-weight:600;line-height:1;letter-spacing:-.02em;
+  }
+  .score span{
+    display:block;margin-top:8px;font-size:12px;
+    letter-spacing:.14em;opacity:.85;
+  }
+  .verdict-body{padding:22px 28px}
+  .verdict-body p{margin:0;font-size:15.5px}
+  .verdict-body strong{color:var(--enamel)}
+  .breakeven{
+    margin:0 0 44px;border:1.5px solid var(--ink);border-top:none;
+    background:var(--amber-tint);padding:16px 28px;
+    font-family:"IBM Plex Mono",monospace;font-size:14px;
+    display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline;
+  }
+  .breakeven b{font-size:22px;font-weight:600;color:var(--amber)}
+  section{padding-top:52px}
+  h2{
+    font-family:"Noto Serif TC",serif;font-size:24px;font-weight:700;
+    margin:0 0 6px;padding-bottom:12px;border-bottom:1px solid var(--rule);
+    display:flex;align-items:baseline;gap:14px;
+  }
+  h2 i{
+    font-style:normal;font-family:"IBM Plex Mono",monospace;
+    font-size:13px;color:var(--enamel);letter-spacing:.1em;
+  }
+  h3{
+    font-family:"Noto Sans TC",sans-serif;font-size:17px;font-weight:700;
+    margin:34px 0 10px;color:var(--ink);
+  }
+  h3::before{content:"";display:inline-block;width:14px;height:2px;background:var(--enamel);vertical-align:middle;margin-right:10px}
+  p{margin:0 0 16px}
+  ul{margin:0 0 18px;padding-left:20px}
+  li{margin-bottom:10px}
+  strong{font-weight:700}
+  em{font-style:normal;background:linear-gradient(transparent 62%,var(--enamel-tint) 62%);font-weight:500}
+  .scroll{overflow-x:auto;margin:0 0 22px;border:1px solid var(--rule);background:var(--card)}
+  table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:520px}
+  caption{
+    text-align:left;padding:14px 16px;font-weight:700;font-size:14px;
+    border-bottom:1px solid var(--rule);background:var(--card);
+  }
+  th,td{padding:11px 16px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+  thead th{
+    background:var(--ink);color:#fff;font-weight:500;font-size:13px;
+    letter-spacing:.04em;border-bottom:none;
+  }
+  tbody tr:last-child td{border-bottom:none}
+  td.num,th.num{
+    font-family:"IBM Plex Mono",monospace;text-align:right;
+    font-variant-numeric:tabular-nums;white-space:nowrap;
+  }
+  tr.total td{background:var(--enamel-tint);font-weight:700}
+  tr.neg td.num{color:#9A3324}
+  tr.pos td.num{color:var(--enamel)}
+  .note{
+    border-left:3px solid var(--amber);background:var(--amber-tint);
+    padding:14px 20px;margin:0 0 22px;font-size:14.5px;
+  }
+  .note b{color:var(--amber)}
+  ol.actions{counter-reset:step;list-style:none;padding:0;margin:0}
+  ol.actions li{
+    counter-increment:step;position:relative;padding-left:52px;margin-bottom:22px;
+  }
+  ol.actions li::before{
+    content:counter(step,decimal-leading-zero);
+    position:absolute;left:0;top:2px;
+    font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;
+    color:#fff;background:var(--ink);padding:3px 8px;
+  }
+  ol.actions h4{margin:0 0 4px;font-size:16px}
+  footer{
+    margin-top:64px;padding-top:24px;border-top:2px solid var(--ink);
+    font-size:13px;color:var(--ink-soft);
+  }
+  footer ul{padding-left:18px}
+  footer li{margin-bottom:8px}
+  @media (max-width:560px){
+    .verdict{grid-template-columns:1fr}
+    .score{border-right:none;border-bottom:1.5px solid var(--ink)}
+  }
+  @media print{
+    body{background:#fff;font-size:11.5pt}
+    .wrap{max-width:none;padding:0}
+    section{page-break-inside:avoid}
+    .scroll{overflow:visible}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="eyebrow">Feasibility Study — 2026</p>
+  <h1>新竹金山街<br>純外帶便當店 創業可行性評估</h1>
+  <p class="standfirst">以竹科旁金山街商圈、啟動資金 80 萬、頂讓現成店面、母女兩人主力經營為前提，評估市場、成本、售價與損益結構。</p>
+  <div class="meta">
+    <span>商圈｜新竹市東區金山街</span>
+    <span>資金｜NT$800,000</span>
+    <span>模式｜頂讓 × 純外帶</span>
+  </div>
+</header>
+
+<div class="verdict">
+  <div class="score"><b>6.5</b><span>／ 10 可行性</span></div>
+  <div class="verdict-body">
+    <p><strong>中等偏可行。</strong>竹科午餐屬剛性需求，純外帶模式與 80 萬資金相符；但同質化競爭激烈、週末空城效應明顯、食材與人事成本連年上漲。成敗關鍵在於<strong>差異化定位 ＋ 自建數位訂餐通路 ＋ 切入竹科團訂市場</strong>，避免落入銅板便當價格戰。</p>
+  </div>
+</div>
+
+<div class="breakeven">
+  <span>損益兩平點</span>
+  <b>每日 115–120 個便當</b>
+  <span>／ 月營收約 31 萬元</span>
+</div>
+
+<section>
+  <h2><i>01</i>市場需求</h2>
+  <p>竹科（新竹園區）2025 年底從業員工數達 <em>179,298 人</em>，年增 1,643 人；入區廠商 584 家，2025 年營業額 1.70 兆元，較 2024 年成長 12.25%，三者均創歷史新高。國科會統計三大科學園區就業人數合計逾 34 萬人。</p>
+  <p>金山街被稱為「竹科新手村」「竹科第二個廚房」，緊鄰友達光電、聯發科總部等大廠，步行不到 5 分鐘到竹科，是剛出社會工程師的租屋與覓食核心區。工程師工時長、常態 on call，午餐講求「快」，外帶與外送需求極高——街上飲料店數量比便當店還多，反映高壓快節奏的消費特性。</p>
+  <p>外送滲透充分：資策會 MIC 2025 年調查，常用平台為 foodpanda（73.6%）、Uber Eats（57.6%），兩者差距已縮至 1.3%，Uber Eats 首度成為 18–25 歲與北部消費者首選。兩大平台合計涵蓋全台 80% 以上外送訂單，便當為表現最好的品類之一。</p>
+</section>
+
+<section>
+  <h2><i>02</i>競爭分析</h2>
+  <p>金山街便當／餐盒業者密集，呈現三層結構。純銅板便當已近紅海、毛利被食材漲價嚴重壓縮；健康餐盒與商務／會議餐盒才是成長中的區隔，進入門檻在於菜色設計與穩定品質，而非最低價。</p>
+  <div class="scroll">
+    <table>
+      <caption>金山街及周邊主要競品</caption>
+      <thead>
+        <tr><th>店家</th><th>位置</th><th class="num">價格帶</th><th>定位</th><th>主要通路</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>巧味快餐</td><td>金山十一街</td><td class="num">80–110</td><td>銅板自助便當、排隊名店</td><td>現場</td></tr>
+        <tr><td>升一排骨</td><td>金山七街</td><td class="num">75 起</td><td>平價排骨飯</td><td>現場</td></tr>
+        <tr><td>飯飯</td><td>金山街 98 號</td><td class="num">約 100</td><td>日式便當</td><td>現場＋外送</td></tr>
+        <tr><td>姊妹飯桶</td><td>金山店等 5 家</td><td class="num">95–184</td><td>品牌雞腿專賣、圓形餐盒</td><td>現場＋外送＋團訂</td></tr>
+        <tr><td>香港大來燒臘</td><td>金山七街 56 號</td><td class="num">中價</td><td>港式燒臘、年輕化店型</td><td>現場＋外送</td></tr>
+        <tr><td>有飯吃健康餐盒</td><td>金山九街</td><td class="num">110 起</td><td>少油少鹽、主餐 16 種</td><td>現場＋外送</td></tr>
+        <tr><td>剛剛好食</td><td>金山街</td><td class="num">150–340</td><td>歐式商務餐盒、會議便當</td><td>純外帶＋團訂</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note"><b>注意：</b>外送平台顯示價格已含平台加價，門市自取價通常低 20–50 元，做競品比價時應以自取價為基準。</div>
+</section>
+
+<section>
+  <h2><i>03</i>售價與價格敏感度</h2>
+  <p>中央大學經濟系教授吳大任觀察，學校附近便當店每次調價都是 5 元，「以前 60、70 元的雞腿便當現在已接近 120 元」，並示警 K 型經濟下大部分人薪水沒漲。2025–2026 年多家名店調漲：板橋 49 年老店蔡家排骨滷排骨邁入百元大關、高雄鹽埕名店雞腿飯漲至 175 元。</p>
+  <p>新竹主流價格帶：一般便當／自助餐 80–110 元、雞腿／排骨便當 100–150 元、健康餐盒 110–200 元、商務／會議餐盒 200–340 元。消費者價格敏感度高（「千元體感剩五百」），但竹科工程師相對高薪、對品質與便利性願付溢價——<em>適合中價位＋高價值感定位</em>。</p>
+</section>
+
+<section>
+  <h2><i>04</i>成本結構</h2>
+
+  <h3>店面租金與頂讓金</h3>
+  <p>依 591 實際刊登物件換算，金山街核心可餐飲一樓店面約 <em>2,450–2,500 元／坪</em>（金山六街 20 坪月租 49,800 元、40 坪 98,000 元）；光復路一段約 2,000–2,500 元／坪。20 坪店面月租約 4–5 萬元。</p>
+  <p>頂讓金開價多在 50–100 萬，但普遍大幅讓價。實際案例：金山十街 25 坪 16 年老店由 100 萬降至 55 萬；金山八街 18 坪店 60 萬降至 20 萬；金山十五街 10 坪連鎖果汁店 50 萬降至 12 萬；光復路一段 20 坪飲料店 80 萬降至 60 萬。歸納：小坪數飲料店 12–60 萬、25–36 坪小吃／早午餐 40–90 萬。</p>
+
+  <h3>食材、人事與其他</h3>
+  <p>2026 年豬肉、雞肉、蔬菜價格普遍上行（電宰廠雞腿報價單月連漲三波）；便當業食材成本率一般約 30–40%，40% 是警戒線。人事方面，依勞動部公告，自 2026 年 1 月 1 日起最低月薪由 28,590 元調升至 <em>29,500 元</em>、時薪由 190 元調至 <em>196 元</em>，為連續第 10 年調漲。餐飲業缺工嚴峻，勞動部統計 113 年餐飲業職缺率達 7.3%、為近九年最高。新竹餐飲時薪加計勞健保實際成本約 250–280 元／時。紙便當盒（含蓋）每個批發約 2–5 元；水電瓦斯約佔營業額 5–6%。</p>
+
+  <div class="scroll">
+    <table>
+      <caption>月成本結構試算｜20 坪純外帶店・中性情境</caption>
+      <thead>
+        <tr><th>項目</th><th class="num">月金額</th><th class="num">佔營收</th><th>備註</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>店面租金</td><td class="num">45,000</td><td class="num">12%</td><td>20 坪，約 2,250 元／坪</td></tr>
+        <tr><td>食材成本</td><td class="num">145,000</td><td class="num">38%</td><td>便當業典型 30–40%</td></tr>
+        <tr><td>人事</td><td class="num">90,000</td><td class="num">24%</td><td>2 人主力＋1 兼職，含勞健保</td></tr>
+        <tr><td>水電瓦斯</td><td class="num">22,000</td><td class="num">6%</td><td></td></tr>
+        <tr><td>包材</td><td class="num">15,000</td><td class="num">4%</td><td>每盒約 3–4 元</td></tr>
+        <tr><td>雜支／系統／行銷</td><td class="num">15,000</td><td class="num">4%</td><td>POS、LINE OA、清潔耗材</td></tr>
+        <tr class="total"><td>成本合計</td><td class="num">332,000</td><td class="num">88%</td><td></td></tr>
+        <tr><td>預估月營收</td><td class="num">380,000</td><td class="num">100%</td><td>中性情境</td></tr>
+        <tr class="pos"><td><strong>稅前淨利</strong></td><td class="num">48,000</td><td class="num">12%</td><td>符合餐飲業平均水準</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2><i>05</i>資金配置與損益模型</h2>
+  <div class="scroll">
+    <table>
+      <caption>80 萬啟動資金分配建議</caption>
+      <thead><tr><th>項目</th><th class="num">金額（萬元）</th><th>說明</th></tr></thead>
+      <tbody>
+        <tr><td>頂讓金</td><td class="num">30</td><td>接手現成便當／小吃店，含既有廚房設備</td></tr>
+        <tr><td>押金</td><td class="num">9</td><td>月租 4.5 萬 × 2 個月</td></tr>
+        <tr><td>設備補充／整修</td><td class="num">10</td><td>蒸飯箱、炸鍋、冷藏、招牌、動線</td></tr>
+        <tr><td>首月食材／開辦費</td><td class="num">6</td><td>首批進貨、證照、產品責任險、登記</td></tr>
+        <tr><td>數位系統建置</td><td class="num">3</td><td>LINE OA、線上點餐、POS</td></tr>
+        <tr><td>週轉金</td><td class="num">22</td><td>可支撐約 4–5 個月固定支出</td></tr>
+        <tr class="total"><td>合計</td><td class="num">80</td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note"><b>建議：</b>若頂讓金談至 40–55 萬（設備較齊全的現成便當店），應搭配微型創業鳳凰貸款加厚週轉金至 6 個月以上，以度過開業磨合期與淡季。</div>
+
+  <div class="scroll">
+    <table>
+      <caption>三情境損益試算｜每月約 26 個有效營業日</caption>
+      <thead>
+        <tr><th>情境</th><th class="num">日均便當數</th><th class="num">客單價</th><th class="num">月營收</th><th class="num">月成本</th><th class="num">稅前淨利</th></tr>
+      </thead>
+      <tbody>
+        <tr class="neg"><td>保守</td><td class="num">100</td><td class="num">105</td><td class="num">273,000</td><td class="num">300,000</td><td class="num">−27,000</td></tr>
+        <tr class="pos"><td>中性</td><td class="num">145</td><td class="num">110</td><td class="num">380,000</td><td class="num">332,000</td><td class="num">+48,000</td></tr>
+        <tr class="pos"><td>樂觀</td><td class="num">200</td><td class="num">120</td><td class="num">576,000</td><td class="num">420,000</td><td class="num">+156,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>保守情境會小幅虧損，凸顯<em>必須靠團訂／會議便當拉高客單與量</em>的必要性。有效營業日已計入週末人潮偏少的折減。</p>
+</section>
+
+<section>
+  <h2><i>06</i>法規與資金來源</h2>
+  <p><strong>必辦項目：</strong>商業登記（建議先以行號起步）＋稅籍登記（向國稅局辦理）＋食品業者登錄（食藥署「非登不可」平台線上辦理，可用自然人憑證，未登錄可罰 3 萬–300 萬元）＋產品責任險。</p>
+  <p><strong>微型創業鳳凰貸款（女性專屬，本案最適）：</strong>勞動部主管，適用未滿 45 歲成年女性；辦有公司／商業登記者最高可貸 <em>200 萬元</em>（僅辦稅籍登記之小規模商業最高 50 萬元）；<em>前 2 年免息</em>（勞動部全額補貼），第 3 年起按郵儲 2 年期利率加 0.575% 計息；免保證人、免擔保品，提供 95% 信用保證。須於 3 年內參與創業研習課程至少 18 小時並經創業諮詢輔導。</p>
+  <p><strong>替代選項——青年創業及啟動金貸款：</strong>經濟部中小及新創企業署主管，適用 18–45 歲、設立未滿 8 年之事業；週轉性支出最高 600 萬、資本性支出最高 1,200 萬，100 萬元以內部分政府提供最長 5 年利息補貼，須完成 20 小時創業輔導課程。額度更高，依需求與身分擇一申請。</p>
+</section>
+
+<section>
+  <h2><i>07</i>風險評估</h2>
+  <h3>空城效應（本案最特殊風險）</h3>
+  <p>金山街是純上班族商圈，週末與連假人潮驟減。據《聯合報》報導，中秋連假期間竹科上班車潮僅剩往常約 <em>4 成</em>。純外帶便當店若營收完全依賴平日午餐，週末與連假營收將大幅下滑，成本結構必須預先假設有效營業日偏少。</p>
+  <h3>科技業景氣連動</h3>
+  <p>全店營收高度依附竹科，若半導體景氣反轉、廠商裁員或放無薪假，衝擊會直接反映在午餐人潮上。</p>
+  <h3>同質化競爭與缺工</h3>
+  <p>金山街便當店密集、進入門檻低，價格戰壓縮毛利；餐飲業缺工為結構性問題，職缺率創近九年新高、一線離職率偏高。2 人主力＋家族餐飲經驗雖為優勢，仍須預留請不到兼職時的營運彈性。</p>
+</section>
+
+<section>
+  <h2><i>08</i>機會點：數位化與 B2B 團訂</h2>
+  <h3>自建 LINE 預訂通路</h3>
+  <p>可繞過外送平台 25–35% 抽成、100% 掌握客戶數據做再行銷。以田口袋 PocketFarm 試算，客單 300 元便當走 Uber Eats 毛利約 90 元，自家 LINE 收單自取毛利約 180 元——<em>自家收單毛利是平台的近 2 倍</em>。金山街多數便當店仍靠現場排隊與電話接單，這正是本案最強的護城河。</p>
+  <h3>企業團訂／會議便當</h3>
+  <p>竹科會議便當市場已成熟（竹取鶴、稻谷餐盒、剛剛好食、姊妹飯桶等專攻此塊），普遍設「10 個以上免外送」門檻、40 份以上 95 折、100 份 9 折。此市場毛利穩定、需求可預測、可精準備料降低損耗，客源黏著度高——<em>正好對沖週末空城的平日集中風險</em>。</p>
+  <h3>健康餐盒訂閱制</h3>
+  <p>鎖定重視健康與飲控的工程師客群，以週訂閱建立穩定回購與現金流。</p>
+</section>
+
+<section>
+  <h2><i>09</i>行動建議</h2>
+  <ol class="actions">
+    <li>
+      <h4>開業前｜資金與物件同步進行</h4>
+      <p>立即報名完成微型創業鳳凰貸款所需的 18 小時創業研習課程，同步撰寫營運計畫書送件。鎖定金山街或光復路一段 25–35 坪、頂讓金談判區間 40–55 萬、月租 4–5 萬的現成便當／小吃店，現成廚房設備可省下大筆裝潢與設備採購。辦妥商業登記、稅籍登記、食安字號、產品責任險。<strong>變更門檻：</strong>若頂讓金＋押金＋整修合計超過 60 萬，改找更小坪數或加強議價，確保週轉金不低於 20 萬。</p>
+    </li>
+    <li>
+      <h4>0–3 個月｜定位與通路</h4>
+      <p>採中價位＋高價值感定位（主力便當 100–130 元、健康餐盒 130–160 元），避開最低價肉搏。第一天就上線 LINE 官方帳號預訂制與線上點餐。可暫時上架單一外送平台衝初期曝光與新客，但店內顯著引導「加 LINE 自取更便宜」，逐步把客流從高抽成平台轉回自有通路。</p>
+    </li>
+    <li>
+      <h4>3–6 個月｜攻 B2B 與訂閱</h4>
+      <p>主攻竹科企業團訂與會議便當，用自動化系統處理團體訂單與收款，設定「10 個以上免外送」「40 份 95 折、100 份 9 折」分級優惠；同步推健康餐盒週訂閱制，建立可預測的平日基本盤。<strong>擴張門檻：</strong>團訂佔營收達 30% 以上、且連續 2 個月稅前淨利為正，即可評估擴充產能或增聘人手。</p>
+    </li>
+    <li>
+      <h4>止損門檻</h4>
+      <p>若連續 3 個月日均低於 115 個便當且週轉金降至 2 個月以下，立即檢討菜單、定價與人力配置。若竹科出現明確景氣下行（廠商放無薪假／裁員），優先強化 B2B 團訂與外送分散風險，並凍結非必要支出。</p>
+    </li>
+  </ol>
+</section>
+
+<footer>
+  <p><strong>資料侷限與注意事項</strong></p>
+  <ul>
+    <li>損益模型為情境估算，實際數字高度取決於頂讓店現況、租金、實際銷量與家族 2 人的支薪方式。</li>
+    <li>租金與頂讓金均為刊登開價（非成交價），部分為賣方降價後掛牌價，須實地看店議價。頂讓最大風險在於接手不良設備或隱藏債務糾紛——簽約前務必查核租約可否轉讓、有無積欠款項。</li>
+    <li>便當售價與食材成本為 2025–2026 年快照，波動快（尤其豬肉、雞肉、蔬菜），須持續追蹤農業部／中央畜產會行情並保留調價彈性。</li>
+    <li>官方「餐飲業職缺率 7.3%」與坊間「缺工率 28–38%」為不同口徑，前者為職位空缺率，後者多為業者自陳感受調查。</li>
+    <li>本次未查到金山街現營便當店掛牌頂讓，頂讓金區間係由鄰近餐飲物件推估。</li>
+  </ul>
+  <p style="margin-top:20px;font-family:'IBM Plex Mono',monospace;font-size:12px;">評估基準日：2026 年 8 月</p>
+</footer>
+
+</div>
+</body>
+</html>
